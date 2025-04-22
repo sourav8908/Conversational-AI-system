@@ -122,8 +122,10 @@ Alternatively, you can start the components separately:
 2. **Start the MCP Server**
 
 ```bash
-python -m app.main                --> Demo (B:\Conversational AI system>python -m app.main)
+python -m app.main                
 ```
+--> Demo (B:\Conversational AI system>python -m app.main)
+
 
 This will start the FastAPI server on http://localhost:8000
 
@@ -132,8 +134,10 @@ This will start the FastAPI server on http://localhost:8000
 In a separate terminal:
 
 ```bash
-python -m app.ui.gradio_app             --> Demo (B:\Conversational AI system>python -m app.ui.gradio_app)
+python -m app.ui.gradio_app             
 ```
+--> Demo (B:\Conversational AI system>python -m app.ui.gradio_app)
+
 
 This will start the Gradio UI, typically accessible at http://localhost:7860
 
