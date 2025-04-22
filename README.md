@@ -6,6 +6,19 @@ A complete end-to-end conversational AI application that allows users to chat wi
 
 This solution implements a conversational AI application with the following components:
 
+### ⚠️ Note on Free vs Paid API Access
+
+This project supports integration with the following LLM providers:
+
+- ✅ **Google Gemini** – Integrated and tested using a free-tier API key.
+- 🔒 **OpenAI (GPT-3.5, GPT-4)** – Placeholders included; requires a paid API key to activate.
+- 🔒 **Anthropic Claude** – Placeholders included; requires a paid API key to activate.
+
+> 🧠 If you have API keys for OpenAI or Anthropic, just update your `.env` or `settings.py` — no code changes are needed.
+
+This structure ensures compatibility with all three providers while keeping the current setup cost-free.
+
+
 1. **MCP Server (FastAPI)**: 
    - Central control plane for handling model selection and chat orchestration
    - RESTful endpoints for both standard and streaming responses
@@ -99,7 +112,7 @@ ANTHROPIC_API_KEY=your_anthropic_key_here
 1. **Start the entire application with a single command**
 
 ```bash
-python run.py
+python run.py           
 ```
 
 This will start both the FastAPI server and Gradio UI and open a browser window.
@@ -109,7 +122,7 @@ Alternatively, you can start the components separately:
 2. **Start the MCP Server**
 
 ```bash
-python -m app.main
+python -m app.main                --> Demo (B:\Conversational AI system>python -m app.main)
 ```
 
 This will start the FastAPI server on http://localhost:8000
@@ -119,7 +132,7 @@ This will start the FastAPI server on http://localhost:8000
 In a separate terminal:
 
 ```bash
-python -m app.ui.gradio_app
+python -m app.ui.gradio_app             --> Demo (B:\Conversational AI system>python -m app.ui.gradio_app)
 ```
 
 This will start the Gradio UI, typically accessible at http://localhost:7860
